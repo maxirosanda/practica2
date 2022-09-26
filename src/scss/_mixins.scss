@@ -1,0 +1,93 @@
+@mixin grid ($display:none,$column:none,$width:none,$gap:none,$justify:none,$align:none,$breakpoints:none) {
+    $break:(
+     sm:576px,
+     md:768px,
+     lg:992px,
+     xl:1200px
+    );
+ @each $clave, $var in $break {
+     @if $breakpoints == $clave {
+         @media(max-width:$var){
+             @if $display != none {
+                 display: grid;
+             }
+             @if $column != none {
+                 grid-template-columns: repeat($column, $width) ;
+             }
+             @if $gap != none {
+                 gap: $gap;
+             }
+             @if $justify != none {
+                 justify-content: $justify;
+             }
+             @if $align != none {
+                 align-content: $align;
+             }
+         }
+     }
+ }
+ @if $breakpoints == none {
+         @if $display != none {
+             display: grid;
+         }
+         @if $column != none {
+             grid-template-columns: repeat($column ,$width) ;
+         }
+         @if $gap != none {
+             gap: $gap;
+         }
+         @if $justify != none {
+             justify-content: $justify;
+         }
+         @if $align != none {
+             align-content: $align;
+         }
+ }
+ }
+ 
+ @mixin flex($display:none,$direction:none,$wrap:none,$justify:none,$align:none,$breakpoints:none){
+    $break:(
+        sm:576px,
+        md:768px,
+        lg:992px,
+        xl:1200px
+       );
+    @each $clave, $var in $break {
+        @if $breakpoints == $clave {
+            @media(max-width:$var){
+                @if $display != none {
+                    display: flex;
+                }
+                @if $direction != none {
+                    flex-direction: $direction;
+                }
+                @if $wrap != none {
+                    flex-wrap: $wrap;
+                }
+                @if $justify != none {
+                    justify-content: $justify;
+                }
+                @if $align != none {
+                    align-items: $align;
+                }
+            }
+        }
+    }
+    @if $breakpoints == none {
+        @if $display != none {
+            display: flex;
+        }
+        @if $direction != none {
+            flex-direction: $direction;
+        }
+        @if $wrap != none {
+            flex-wrap: $wrap;
+        }
+        @if $justify != none {
+            justify-content: $justify;
+        }
+        @if $align != none {
+            align-items: $align;
+        }
+    }
+ }

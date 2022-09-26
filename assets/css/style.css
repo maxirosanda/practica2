@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.portada {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.portada .filtros {
+  width: 75%;
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: -100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.portada .filtros div {
+  display: flex;
+  flex-direction: column;
+}
+
+.portada .filtros div input {
+  width: 150px;
+}
+/*# sourceMappingURL=style.css.map */
