@@ -8,10 +8,17 @@
         list-style: none;
         display: flex;
         margin: 0;
+        margin-left: 100px;
         padding: 0;
         width: 100%;
         overflow-x: scroll;
         &::-webkit-scrollbar {display: none;}
+        @media(max-width:992px){
+            margin: 0;
+        }
+        @media(max-width:678px){
+            justify-content: c;
+        }
 
         li{
             
@@ -23,6 +30,13 @@
                 text-decoration: none;
                 padding: 10px;
                 height: 68px;
+                color: #1B80BF;
+                &:hover{
+                    color: #0565a5;
+                }
+                i,div{
+                    color:inherit;
+                }
               
             }
         }

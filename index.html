@@ -11,6 +11,16 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
+  <nav class="barraSuperior">
+      <img src="./assets/img/logo-01.svg" alt="">
+      <i class="fa-solid fa-bars"></i>
+    <ul>
+      <li> <a href=""><i class="fa-solid fa-address-card"></i> Crear una cuenta</a></li>
+      <li><a href=""><i class="fa-solid fa-user  "></i> Iniciar sesión</a></li>
+      <li><a href=""><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
+      <li><a href=""><i class="fa-solid fa-circle-info"></i> Ayuda</a></li>
+    </ul>
+  </nav>
   <nav class="navegador">
     <ul>
       <li><a href=""><i class="fa-solid fa-suitcase"></i>Paquetes</a></li>
@@ -41,8 +51,34 @@
           <input type="date" name="" id="" placeholder="Vuelta">
         </div>  
         <div class="input5">
-          <label for="habitacion"><i class="fa-solid fa-house"></i></label>
-          <input id="habitacion" type="text" name="" id="" placeholder="Habitaciones">
+          <label for="habitaciones"><i class="fa-solid fa-house"></i> Habitaciones <i class="fa-solid fa-chevron-down"></i></label>
+          <input id="habitaciones" type="checkbox">
+          <div class="habitaciones">
+            <div class="habitaciones-datos">
+              <span>Adultos</span>
+              <div>
+                  <button>-</button> 
+                  <span>1</span> 
+                  <button>+</button>
+              </div>
+            </div>
+            <div class="habitaciones-datos" >
+              <span>Menores</span>
+              <div>
+                  <button>-</button> 
+                  <span>1</span> 
+                  <button>+</button>
+              </div>
+            </div>
+            <div class="habitaciones-datos">
+              <span>Habitaciones</span>
+              <div>
+                  <button>-</button> 
+                  <span>1</span> 
+                  <button>+</button>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="input6">
           <input type="submit" value="Buscar">

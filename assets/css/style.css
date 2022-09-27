@@ -1,29 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .portada {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  position: relative;
   background-image: url(../../assets/img/portada2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 400px;
 }
-@media (max-width: 1200px) {
-  .portada {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 .portada-filtros {
-  width: 80%;
-  position: absolute;
+  width: 90%;
   box-shadow: rgba(0, 0, 0, 0.5) 0px -3px 8px;
   padding: 30px 10px;
   background-color: white;
+  opacity: 0.8;
   border-radius: 10px;
-  bottom: -60px;
 }
 .portada-filtros h2 {
   font-size: 20px;
@@ -79,6 +71,7 @@
   background-color: white;
   right: -6px;
   padding: 5px;
+  font-size: 12px;
 }
 .portada-filtros-inputs input {
   outline: none;
@@ -97,15 +90,47 @@
   background-image: url(../../assets/img/calendar-days-solid.svg);
   position: relative;
   right: 90px;
+  font-family: "Kanit", sans-serif;
+}
+.portada-filtros-inputs .input5 {
+  position: relative;
 }
 .portada-filtros-inputs .input5 input {
   width: 100px;
+  display: none;
+}
+.portada-filtros-inputs .input5 input:checked + .habitaciones {
+  display: flex;
+}
+.portada-filtros-inputs .input5 .habitaciones {
+  display: none;
+  width: 250px;
+  position: absolute;
+  padding: 15px;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px -3px 8px;
+  background-color: white;
+}
+.portada-filtros-inputs .input5 .habitaciones-datos {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+}
+.portada-filtros-inputs .input5 .habitaciones-datos span {
+  width: 90px;
+  font-size: 12px;
+  padding: 0px 6px;
+}
+.portada-filtros-inputs .input5 .habitaciones-datos button {
+  padding: 3px 10px;
+  border: 1px solid #1B80BF;
 }
 .portada-filtros-inputs input[type=submit] {
   width: 100%;
   padding: 5px 20px;
   border-radius: 5px;
-  background-color: aqua;
+  background-color: #BF2C47;
   color: white;
 }
 
@@ -119,12 +144,23 @@
   list-style: none;
   display: flex;
   margin: 0;
+  margin-left: 100px;
   padding: 0;
   width: 100%;
   overflow-x: scroll;
 }
 .navegador ul::-webkit-scrollbar {
   display: none;
+}
+@media (max-width: 992px) {
+  .navegador ul {
+    margin: 0;
+  }
+}
+@media (max-width: 678px) {
+  .navegador ul {
+    justify-content: c;
+  }
 }
 .navegador ul li a {
   display: flex;
@@ -134,10 +170,99 @@
   text-decoration: none;
   padding: 10px;
   height: 68px;
+  color: #1B80BF;
+}
+.navegador ul li a:hover {
+  color: #0565a5;
+}
+.navegador ul li a i, .navegador ul li a div {
+  color: inherit;
+}
+
+.barraSuperior {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+@media (max-width: 678px) {
+  .barraSuperior {
+    justify-content: start;
+  }
+}
+.barraSuperior img {
+  width: 150px;
+}
+@media (max-width: 678px) {
+  .barraSuperior img {
+    order: 2;
+  }
+}
+.barraSuperior .fa-bars {
+  display: none;
+  padding: 15px;
+}
+.barraSuperior .fa-bars:hover + ul {
+  left: 0;
+}
+@media (max-width: 678px) {
+  .barraSuperior .fa-bars {
+    display: block;
+  }
+}
+.barraSuperior ul {
+  margin: 0;
+  margin-right: 100px;
+  list-style: none;
+  display: flex;
+}
+@media (max-width: 992px) {
+  .barraSuperior ul {
+    margin-right: 0;
+  }
+}
+@media (max-width: 678px) {
+  .barraSuperior ul {
+    position: absolute;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    align-items: flex-start;
+    top: 0;
+    left: -100vh;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px -3px 8px;
+    z-index: 300;
+    min-width: 250px;
+    padding: 0;
+    padding-top: 50px;
+  }
+  .barraSuperior ul:hover {
+    left: 0;
+  }
+  .barraSuperior ul li {
+    padding: 10px 0px;
+  }
+}
+.barraSuperior ul li a {
+  padding: 10px;
+  text-decoration: none;
+  color: #848485;
+}
+.barraSuperior ul li a:hover {
+  color: black;
+}
+.barraSuperior ul li:nth-child(3) a {
+  color: #25d366;
+}
+.barraSuperior ul li:nth-child(3) a i {
+  color: inherit;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  color: #454445;
 }/*# sourceMappingURL=style.css.map */

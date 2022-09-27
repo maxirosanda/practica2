@@ -1,27 +1,20 @@
 .portada{
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    position: relative;
     background-image: url(../../assets/img/portada2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 400px;
-    @media(max-width:1200px){
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-   
+     
     &-filtros{
-        width: 80%;
-        position: absolute;
+        width: 90%;
         box-shadow: rgba(0,0,0,0.5) 0px -3px 8px;
         padding: 30px 10px;
         background-color: white;
+        opacity: 0.8;
         border-radius: 10px;
-        bottom: -60px;
   
         h2{
             font-size: 20px;
@@ -71,6 +64,7 @@
                 background-color: white;
                 right: -6px;
                 padding: 5px;
+                font-size: 12px;
             }
            
             input{
@@ -92,19 +86,50 @@
                     background-image: url(../../assets/img/calendar-days-solid.svg);
                     position: relative;
                     right:90px;
+                    font-family: 'Kanit', sans-serif;
                 }
               
             }
             .input5{
+                position: relative;
                 input{
                     width: 100px;
+                    display: none;
+                    &:checked + .habitaciones{
+                        display: flex;
+                    }
+                }
+                .habitaciones{
+                    display: none;
+                    width: 250px;
+                    position: absolute;
+                    padding: 15px;
+                    flex-direction: column;
+                    align-items: center;
+                    box-shadow: rgba(0,0,0,0.5) 0px -3px 8px;
+                    background-color: white;
+                    &-datos{
+                        display: flex;
+                        margin-top: 10px;
+                        align-items: center;
+                        span{
+                            width: 90px;
+                            font-size: 12px;
+                            padding: 0px 6px;
+                        }
+                        button{
+                            padding: 3px 10px;
+                            border: 1px solid #1B80BF;
+                        }
+                    }
+                    
                 }
             }
             input[type="submit"]{
                 width: 100%;
                 padding: 5px 20px;
                 border-radius: 5px;
-                background-color:aqua;
+                background-color:#BF2C47;
                 color: white;
              }
              
