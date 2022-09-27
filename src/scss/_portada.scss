@@ -10,10 +10,13 @@
     height: 300px;
     @media(max-width:1200px){
         height: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
    
     &-filtros{
-        width: 90%;
+        width: 80%;
         position: absolute;
         box-shadow: rgba(0,0,0,0.5) 0px -3px 8px;
         padding: 30px 10px;
@@ -25,7 +28,12 @@
             font-size: 20px;
             padding: 20px 10px;
         }
+        @media(max-width:1200px){
+           bottom: 0;
+           position: static;
+           
 
+        }
        
         &-inputs{
             display: grid;
@@ -90,7 +98,7 @@
             }
             .input5{
                 input{
-                    width: 120px;
+                    width: 100px;
                 }
             }
             input[type="submit"]{

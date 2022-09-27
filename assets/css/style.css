@@ -12,10 +12,13 @@
 @media (max-width: 1200px) {
   .portada {
     height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 .portada-filtros {
-  width: 90%;
+  width: 80%;
   position: absolute;
   box-shadow: rgba(0, 0, 0, 0.5) 0px -3px 8px;
   padding: 30px 10px;
@@ -26,6 +29,12 @@
 .portada-filtros h2 {
   font-size: 20px;
   padding: 20px 10px;
+}
+@media (max-width: 1200px) {
+  .portada-filtros {
+    bottom: 0;
+    position: static;
+  }
 }
 .portada-filtros-inputs {
   display: grid;
@@ -91,7 +100,7 @@
   right: 90px;
 }
 .portada-filtros-inputs .input5 input {
-  width: 120px;
+  width: 100px;
 }
 .portada-filtros-inputs input[type=submit] {
   width: 100%;
