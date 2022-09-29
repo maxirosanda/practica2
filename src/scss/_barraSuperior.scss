@@ -1,5 +1,6 @@
 .barraSuperior{
-    height: 50px;
+    font-size: 10px;
+    height: 5em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -9,14 +10,15 @@
     }
 
     img{
-        width: 150px;
+        width: 15em;
         @media(max-width:678px){
             order: 2;
         }
     }
     .fa-bars{
+        font-size: 1.6em;
         display: none;
-        padding: 15px;
+        padding: 1.5em;
         &:hover + ul{
               left: 0;
         }
@@ -29,7 +31,7 @@
    
     ul{
         margin: 0;
-        margin-right: 100px;
+        margin-right: 10em;
         list-style: none;
         display: flex;
         
@@ -37,7 +39,6 @@
             margin-right: 0;
         }
         @media(max-width:678px){
-            
             position: absolute;
             height: 100vh;
             background-color: white;
@@ -47,19 +48,22 @@
             left: -100vh;
             box-shadow:rgba(0,0,0,0.5) 0px -3px 8px;
             z-index: 300;
-            min-width: 250px;
+            min-width: 25em;
             padding: 0;
-            padding-top: 50px;
+            padding-top: 5em;
+            transition: 0.2s;
             &:hover{
                 left: 0;
+
             }
             li{
-                padding: 10px 0px;
+                padding: 1em 0px;
             }
         }
         li{
             a{
-                padding: 10px;
+                font-size: 1.6em;
+                padding: 0.625em;
                 text-decoration: none; 
                 color: #848485;
                 &:hover{

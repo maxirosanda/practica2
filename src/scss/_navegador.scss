@@ -1,14 +1,14 @@
 .navegador{
+    font-size: 10px;
     display: flex;
     justify-content: center;
-    height: 80px;
+    height: 8em;
     align-items: center;
-
     ul{
         list-style: none;
         display: flex;
         margin: 0;
-        margin-left: 100px;
+        margin-left: 10em;
         padding: 0;
         width: 100%;
         overflow-x: scroll;
@@ -23,13 +23,14 @@
         li{
             
             a{
+                font-size: 1.6em;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: space-between;
                 text-decoration: none;
-                padding: 10px;
-                height: 68px;
+                padding: 0.625em;
+                height: 4.25em;
                 color: #1B80BF;
                 &:hover{
                     color: #0565a5;
