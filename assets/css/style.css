@@ -95,11 +95,21 @@
   width: 12em;
   text-indent: 1.2em;
 }
+@media (max-width: 400px) {
+  .portada__filtros__inputs input[type=date] {
+    text-indent: 0;
+  }
+}
 .portada__filtros__inputs input[type=date]::-webkit-calendar-picker-indicator {
   background-image: url(../../assets/img/calendar-days-solid.svg);
   position: relative;
   right: 9em;
   font-family: "Kanit", sans-serif;
+}
+@media (max-width: 400px) {
+  .portada__filtros__inputs input[type=date]::-webkit-calendar-picker-indicator {
+    display: none;
+  }
 }
 .portada__filtros__inputs input[type=submit] {
   width: 100%;

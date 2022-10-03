@@ -80,7 +80,13 @@
                 font-size: 1.2em;
                 width: 12em;
                 text-indent: 1.2em;
+                @media(max-width:400px){
+                    text-indent: 0;
+                }
                 &::-webkit-calendar-picker-indicator{
+                    @media(max-width:400px){
+                        display: none;
+                    }
                     background-image: url(../../assets/img/calendar-days-solid.svg);
                     position: relative;
                     right:9em;
