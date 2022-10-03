@@ -108,7 +108,7 @@
 @media (max-width: 400px) {
   .portada__filtros__inputs input[type=date] {
     text-indent: 0;
-    width: 8em;
+    width: 10em;
   }
 }
 .portada__filtros__inputs input[type=date]::-webkit-calendar-picker-indicator {
