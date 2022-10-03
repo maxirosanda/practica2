@@ -82,6 +82,7 @@
                 text-indent: 1.2em;
                 @media(max-width:400px){
                     text-indent: 0;
+                    width: 7em;
                 }
                 &::-webkit-calendar-picker-indicator{
                     @media(max-width:400px){
