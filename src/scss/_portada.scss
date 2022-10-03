@@ -38,6 +38,12 @@
             @for $var from 1 to 7 {
                 &__input#{$var}{
                     grid-area: zona#{$var};
+                    @if($var == 3 or $var ==4){
+                        @media(max-width:600px ){
+                            justify-self: center;
+                        }
+                       
+                    }
                 }
             }
             @media(max-width: 1200px){
@@ -55,7 +61,7 @@
 
                 grid-template-areas: "zona1 zona1 zona1 zona1"
                                      "zona2 zona2 zona2 zona2"
-                                     "zona3 zona3 zona4  none"
+                                     "zona3 zona3 zona4 zona4"
                                      "zona5 zona5 zona5 zona5"
                                      "zona6 zona6 zona6 zona6";
                 

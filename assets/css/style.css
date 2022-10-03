@@ -57,8 +57,18 @@
 .portada__filtros__inputs__input3 {
   grid-area: zona3;
 }
+@media (max-width: 600px) {
+  .portada__filtros__inputs__input3 {
+    justify-self: center;
+  }
+}
 .portada__filtros__inputs__input4 {
   grid-area: zona4;
+}
+@media (max-width: 600px) {
+  .portada__filtros__inputs__input4 {
+    justify-self: center;
+  }
 }
 .portada__filtros__inputs__input5 {
   grid-area: zona5;
@@ -77,7 +87,7 @@
   .portada__filtros__inputs {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 4em 4em 4em 4em;
-    grid-template-areas: "zona1 zona1 zona1 zona1" "zona2 zona2 zona2 zona2" "zona3 zona3 zona4  none" "zona5 zona5 zona5 zona5" "zona6 zona6 zona6 zona6";
+    grid-template-areas: "zona1 zona1 zona1 zona1" "zona2 zona2 zona2 zona2" "zona3 zona3 zona4 zona4" "zona5 zona5 zona5 zona5" "zona6 zona6 zona6 zona6";
   }
 }
 .portada__filtros__inputs label {
