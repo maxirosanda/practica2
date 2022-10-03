@@ -27,11 +27,12 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: end;
                 text-decoration: none;
                 padding: 0.625em;
                 height: 4.25em;
                 color: #1B80BF;
+                position: relative;
                 &:hover{
                     color: #0565a5;
                 }
@@ -40,6 +41,23 @@
                 }
               
             }
+            @each $clave , $var in (1:"\f0f2",2:"\f70c",3:"\f4d7",4:"\e533",5:"\f072",6:"\f594",7:"\f5b0\f072") {
+                &:nth-child(#{$clave}){
+                    a{
+                   
+                        &::before{
+                            content: $var;
+                            font-family: $fontAwesome;
+                            position: absolute;
+                            bottom: 2em;
+                                   
+                        }
+                     
+                    }
+                    
+                }    
+            }
+
         }
     }
 }

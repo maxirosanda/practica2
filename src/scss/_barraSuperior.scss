@@ -49,7 +49,7 @@
             box-shadow:rgba(0,0,0,0.5) 0px -3px 8px;
             z-index: 300;
             min-width: 25em;
-            padding: 0;
+            padding: 2em;
             padding-top: 5em;
             transition: 0.2s;
             &:hover{
@@ -61,26 +61,38 @@
             }
         }
         li{
+            position: relative;
             a{
                 font-size: 1.6em;
-                padding: 0.625em;
+                padding: 1.2em;
                 text-decoration: none; 
                 color: #848485;
+        
                 &:hover{
                     color: black;
-                } 
-                
+                }     
             }
-            &:nth-child(3){
-                a{
-                    color:#25d366;
-                    i{
-                        color: inherit;
+            @each $clave , $var in (1:"\f2bb",2:"\f007",3:"\f232",4:"\f05a") {
+                &:nth-child(#{$clave}){
+                    a{
+                   
+                        &::before{
+                            content: $var;
+                            font-family: $fontAwesome;
+                            position: absolute;
+                            left: -0.1em;        
+                        }
+                        @if($clave == 3){
+                            color:$whatsappColor;
+                            &:hover{
+                                color:$whatsappHoverColor
+                            }
+                        }
                     }
-                 
-                }
-                
+                    
+                }    
             }
+
         }
     }
 }

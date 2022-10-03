@@ -15,63 +15,63 @@
       <img src="./assets/img/logo-01.svg" alt="">
       <i class="fa-solid fa-bars"></i>
     <ul>
-      <li> <a href=""><i class="fa-solid fa-address-card"></i> Crear una cuenta</a></li>
-      <li><a href=""><i class="fa-solid fa-user  "></i> Iniciar sesión</a></li>
-      <li><a href=""><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
-      <li><a href=""><i class="fa-solid fa-circle-info"></i> Ayuda</a></li>
+      <li><a href="">Crear una cuenta</a></li>
+      <li><a href="">Iniciar sesión</a></li>
+      <li><a href="">WhatsApp</a></li>
+      <li><a href="">Ayuda</a></li>
     </ul>
   </nav>
   <nav class="navegador">
     <ul>
-      <li><a href=""><i class="fa-solid fa-suitcase"></i>Paquetes</a></li>
-      <li><a href=""><i class="fa-solid fa-person-running"></i>Escapadas</a></li>
-      <li><a href=""><i class="fa-solid fa-route"></i>Circuitos</a></li>
-      <li><a href=""><i class="fa-solid fa-people-group"></i>Grupales</a></li>
-      <li><a href=""><i class="fa-solid fa-plane"></i>Vuelos</a></li>
-      <li><a href=""><i class="fa-solid fa-hotel"></i>Hoteles</a></li>
-      <li><a href=""><div><i class="fa-solid fa-plane-departure "></i><i class="fa-solid fa-hotel"></i></div>Vuelos+Hotel</a></li>
+      <li><a href="">Paquetes</a></li>
+      <li><a href="">Escapadas</a></li>
+      <li><a href="">Circuitos</a></li>
+      <li><a href="">Grupales</a></li>
+      <li><a href="">Vuelos</a></li>
+      <li><a href="">Hoteles</a></li>
+      <li><a href="">Vuelos+Hotel</a></li>
     </ul>
   </nav>
   <header class="portada">
-      <form class="portada-filtros">
+      <form class="portada__filtros">
         <h2>¿Qué tipo de viaje estás buscando?</h2>
-        <div class="portada-filtros-inputs" >
-        <div class="input1">
+        <div class="portada__filtros__inputs" >
+        <div class="portada__filtros__inputs__input1">
           <label for="origen"><i class="fa-solid fa-location-pin"></i></label>
           <input id="origen"  type="text" name="" id="" placeholder="Ingrese direccion de salida">
         </div>
-        <div class="input2">
+        <div class="portada__filtros__inputs__input2">
           <label for="destino"><i class="fa-solid fa-location-pin"></i></label>
           <input id="destino" type="text" name="" id="" placeholder="Ingrese una ciudad">
         </div>
-        <div class="input3">
+        <div class="portada__filtros__inputs__input3">
           <input id="fecha" type="date" name="" id="" placeholder="Ida">
         </div>
-        <div class="input4">
+        <div class="portada__filtros__inputs__input4">
           <input type="date" name="" id="" placeholder="Vuelta">
         </div>  
-        <div class="input5">
+        <div class="portada__filtros__inputs__input5">
           <label for="habitaciones"><i class="fa-solid fa-house"></i> Habitaciones <i class="fa-solid fa-chevron-down"></i></label>
           <input id="habitaciones" type="checkbox">
           <div class="habitaciones">
-            <div class="habitaciones-datos">
-              <span>Adultos</span>
+            <div class="habitaciones__datos">
+              <h4>Adultos</h4>
               <div>
                   <button type="button">-</button> 
                   <span>1</span> 
                   <button type="button">+</button>
               </div>
             </div>
-            <div class="habitaciones-datos" >
-              <span>Menores</span>
+            <div class="habitaciones__datos" >
+              <h4>Menores</h4>
               <div>
                   <button type="button">-</button> 
                   <span>1</span> 
                   <button type="button">+</button>
               </div>
             </div>
-            <div class="habitaciones-datos">
-              <span>Habitaciones</span>
+            <div class="habitaciones__datos">
+              <h4>Habitaciones</h4>
               <div>
                   <button type="button">-</button> 
                   <span>1</span> 
@@ -80,7 +80,7 @@
             </div>
           </div>
         </div>
-        <div class="input6">
+        <div class="portada__filtros__inputs__input6">
           <input type="submit" value="Buscar">
         </div>
         </div>
@@ -88,15 +88,14 @@
 
   </header>
   <main>
-    <section>
-      <section class="card">
-        <div class="maxi"></div>
+    <section class="cards">
+      <div class="card">
         <img src="./assets/img/cards/merloSanJuis.jpg" alt="">
-        <div class="content">
+        <div class="card__content">
           <h2>Lorem ipsum dolor sit.</h2>
           <p>Lorem, ipsum dolor.</p>
         </div>
-      </section>
+      </div>
     </section>
   </main>
   <!-- JavaScript Bundle with Popper -->

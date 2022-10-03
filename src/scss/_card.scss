@@ -14,7 +14,7 @@
         width: 100%;
         transition: 1s;
     }
-    .content{
+    .card__content{
         opacity: 0;
         transform: translateY(-3em);
         position: absolute;
@@ -53,7 +53,7 @@
         transform: scale(1.2);
  
     }
-    &:hover  .content {
+    &:hover  &__content {
         opacity: 100;
         transform: translateY(0);
     }

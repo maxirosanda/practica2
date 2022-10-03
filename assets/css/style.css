@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.portada__filtros__inputs input[type=submit], .portada__filtros__inputs input[type=date], .portada__filtros__inputs input[type=text] {
+  outline: none;
+  border: 0;
+  width: 200px;
+  padding: 0.5em;
+  position: relative;
+}
+
 .portada {
   font-size: 10px;
   display: flex;
@@ -8,8 +16,10 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 40em;
+  position: relative;
+  z-index: 200;
 }
-.portada-filtros {
+.portada__filtros {
   width: 90%;
   box-shadow: rgba(0, 0, 0, 0.5) 0px -3px 8px;
   padding: 3em 1em;
@@ -17,93 +27,103 @@
   opacity: 0.8;
   border-radius: 1em;
 }
-.portada-filtros h2 {
+.portada__filtros h2 {
   font-size: 2em;
   padding: 1em 0.5em;
 }
 @media (max-width: 1200px) {
-  .portada-filtros {
-    bottom: 0;
-    position: static;
+  .portada__filtros {
+    width: 500px;
   }
 }
-.portada-filtros-inputs {
+@media (max-width: 550px) {
+  .portada__filtros {
+    width: 90%;
+  }
+}
+.portada__filtros__inputs {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-areas: "zona1 zona1 zona1  zona2 zona2 zona2  zona3 zona4 zona5 zona5  zona6 none ";
   align-items: center;
   justify-content: center;
 }
-.portada-filtros-inputs .input1 {
+.portada__filtros__inputs__input1 {
   grid-area: zona1;
 }
-.portada-filtros-inputs .input2 {
+.portada__filtros__inputs__input2 {
   grid-area: zona2;
 }
-.portada-filtros-inputs .input3 {
+.portada__filtros__inputs__input3 {
   grid-area: zona3;
 }
-.portada-filtros-inputs .input4 {
+.portada__filtros__inputs__input4 {
   grid-area: zona4;
 }
-.portada-filtros-inputs .input5 {
+.portada__filtros__inputs__input5 {
   grid-area: zona5;
 }
-.portada-filtros-inputs .input6 {
+.portada__filtros__inputs__input6 {
   grid-area: zona6;
 }
 @media (max-width: 1200px) {
-  .portada-filtros-inputs {
+  .portada__filtros__inputs {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 4em 4em 4em 4em;
     grid-template-areas: "zona1 zona1 zona2 zona2" "zona3 zona3 zona4 zona4" "zona5 zona5 zona5 zona5" "zona6 zona6 zona6 zona6";
   }
 }
-@media (max-width: 768px) {
-  .portada-filtros-inputs {
+@media (max-width: 600px) {
+  .portada__filtros__inputs {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 4em 4em 4em 4em;
     grid-template-areas: "zona1 zona1 zona1 zona1" "zona2 zona2 zona2 zona2" "zona3 zona3 zona4  none" "zona5 zona5 zona5 zona5" "zona6 zona6 zona6 zona6";
   }
 }
-.portada-filtros-inputs label {
+.portada__filtros__inputs label {
   font-size: 1.2em;
   position: relative;
   background-color: white;
   right: -0.5em;
   padding: 0.42em;
 }
-.portada-filtros-inputs input {
-  width: 20em;
-  outline: none;
-  border: 0;
-  padding: 0.5em;
-}
-.portada-filtros-inputs input[type=text]::placeholder {
+.portada__filtros__inputs input[type=text]::placeholder {
   font-size: 1.4em;
 }
-.portada-filtros-inputs input[type=date] {
+.portada__filtros__inputs input[type=date] {
   font-size: 1.2em;
   width: 12em;
   text-indent: 1.2em;
 }
-.portada-filtros-inputs input[type=date]::-webkit-calendar-picker-indicator {
+.portada__filtros__inputs input[type=date]::-webkit-calendar-picker-indicator {
   background-image: url(../../assets/img/calendar-days-solid.svg);
   position: relative;
   right: 9em;
   font-family: "Kanit", sans-serif;
 }
-.portada-filtros-inputs .input5 {
+.portada__filtros__inputs input[type=submit] {
+  width: 100%;
+  height: 3em;
+  padding: 0.6em 2.6em;
+  border-radius: 0.5em;
+  background-color: #BF2C47;
+  color: white;
+}
+@media (max-width: 600px) {
+  .portada__filtros__inputs input[type=submit] {
+    margin-top: 1em;
+  }
+}
+.portada__filtros__inputs__input5 {
   position: relative;
 }
-.portada-filtros-inputs .input5 input {
-  width: 10em;
+.portada__filtros__inputs__input5 input {
   display: none;
 }
-.portada-filtros-inputs .input5 input:checked + .habitaciones {
+.portada__filtros__inputs__input5 input:checked + .habitaciones {
   display: flex;
 }
-.portada-filtros-inputs .input5 .habitaciones {
+.portada__filtros__inputs__input5 .habitaciones {
   display: none;
   width: 25em;
   position: absolute;
@@ -112,27 +132,23 @@
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.5) 0px -0.3em 0.8em;
   background-color: white;
+  z-index: 100;
 }
-.portada-filtros-inputs .input5 .habitaciones-datos {
+.portada__filtros__inputs__input5 .habitaciones__datos {
   display: flex;
   margin-top: 1em;
   align-items: center;
 }
-.portada-filtros-inputs .input5 .habitaciones-datos span {
+.portada__filtros__inputs__input5 .habitaciones__datos span, .portada__filtros__inputs__input5 .habitaciones__datos h4 {
+  margin: 0;
   font-size: 1.2em;
-  width: 5.625em;
+  width: 7em;
   padding: 0 0.5em;
+  font-weight: 400;
 }
-.portada-filtros-inputs .input5 .habitaciones-datos button {
+.portada__filtros__inputs__input5 .habitaciones__datos button {
   padding: 0.3em 1em;
   border: 1px solid #1B80BF;
-}
-.portada-filtros-inputs input[type=submit] {
-  width: inherit;
-  padding: 0.6em 2.6em;
-  border-radius: 0.5em;
-  background-color: #BF2C47;
-  color: white;
 }
 
 .navegador {
@@ -169,17 +185,60 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
   text-decoration: none;
   padding: 0.625em;
   height: 4.25em;
   color: #1B80BF;
+  position: relative;
 }
 .navegador ul li a:hover {
   color: #0565a5;
 }
 .navegador ul li a i, .navegador ul li a div {
   color: inherit;
+}
+.navegador ul li:nth-child(1) a::before {
+  content: "\f0f2";
+  font-family: FontAwesome;
+  position: absolute;
+  bottom: 2em;
+}
+.navegador ul li:nth-child(2) a::before {
+  content: "\f70c";
+  font-family: FontAwesome;
+  position: absolute;
+  bottom: 2em;
+}
+.navegador ul li:nth-child(3) a::before {
+  content: "\f4d7";
+  font-family: FontAwesome;
+  position: absolute;
+  bottom: 2em;
+}
+.navegador ul li:nth-child(4) a::before {
+  content: "\e533";
+  font-family: FontAwesome;
+  position: absolute;
+  bottom: 2em;
+}
+.navegador ul li:nth-child(5) a::before {
+  content: "\f072";
+  font-family: FontAwesome;
+  position: absolute;
+  bottom: 2em;
+}
+.navegador ul li:nth-child(6) a::before {
+  content: "\f594";
+  font-family: FontAwesome;
+  position: absolute;
+  bottom: 2em;
+}
+.navegador ul li:nth-child(7) a::before {
+  content: "\f5b0\f072";
+  font-family: FontAwesome;
+  position: absolute;
+  bottom: 2em;
 }
 
 .barraSuperior {
@@ -239,7 +298,7 @@
     box-shadow: rgba(0, 0, 0, 0.5) 0px -3px 8px;
     z-index: 300;
     min-width: 25em;
-    padding: 0;
+    padding: 2em;
     padding-top: 5em;
     transition: 0.2s;
   }
@@ -250,20 +309,47 @@
     padding: 1em 0px;
   }
 }
+.barraSuperior ul li {
+  position: relative;
+}
 .barraSuperior ul li a {
   font-size: 1.6em;
-  padding: 0.625em;
+  padding: 1.2em;
   text-decoration: none;
   color: #848485;
 }
 .barraSuperior ul li a:hover {
   color: black;
 }
-.barraSuperior ul li:nth-child(3) a {
-  color: #25d366;
+.barraSuperior ul li:nth-child(1) a::before {
+  content: "\f2bb";
+  font-family: FontAwesome;
+  position: absolute;
+  left: -0.1em;
 }
-.barraSuperior ul li:nth-child(3) a i {
-  color: inherit;
+.barraSuperior ul li:nth-child(2) a::before {
+  content: "\f007";
+  font-family: FontAwesome;
+  position: absolute;
+  left: -0.1em;
+}
+.barraSuperior ul li:nth-child(3) a {
+  color: #007E03;
+}
+.barraSuperior ul li:nth-child(3) a::before {
+  content: "\f232";
+  font-family: FontAwesome;
+  position: absolute;
+  left: -0.1em;
+}
+.barraSuperior ul li:nth-child(3) a:hover {
+  color: #016902;
+}
+.barraSuperior ul li:nth-child(4) a::before {
+  content: "\f05a";
+  font-family: FontAwesome;
+  position: absolute;
+  left: -0.1em;
 }
 
 .card {
@@ -283,19 +369,19 @@
   width: 100%;
   transition: 1s;
 }
-.card .content {
+.card .card__content {
   opacity: 0;
   transform: translateY(-3em);
   position: absolute;
   transition: 1s;
 }
-.card .content h2 {
+.card .card__content h2 {
   font-size: 1.6em;
   margin: 0;
   padding: 0;
   color: white;
 }
-.card .content p {
+.card .card__content p {
   font-size: 1.4em;
   margin: 0;
   padding: 0;
@@ -317,7 +403,7 @@
 .card:hover img {
   transform: scale(1.2);
 }
-.card:hover .content {
+.card:hover .card__content {
   opacity: 100;
   transform: translateY(0);
 }
