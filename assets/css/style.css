@@ -87,7 +87,7 @@
   .portada__filtros__inputs {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 4em 4em 4em 4em;
-    grid-template-areas: "zona1 zona1 zona1 zona1" "zona2 zona2 zona2 zona2" "zona3 zona3 zona4 zona4" "zona5 zona5 zona5 zona5" "zona6 zona6 zona6 zona6";
+    grid-template-areas: "zona1 zona1 zona1 zona1" "zona2 zona2 zona2 zona2" "zona3 zona4 none  none" "zona5 zona5 zona5 zona5" "zona6 zona6 zona6 zona6";
   }
 }
 .portada__filtros__inputs label {
@@ -108,7 +108,7 @@
 @media (max-width: 400px) {
   .portada__filtros__inputs input[type=date] {
     text-indent: 0;
-    width: 9em;
+    width: 7em;
   }
 }
 .portada__filtros__inputs input[type=date]::-webkit-calendar-picker-indicator {
