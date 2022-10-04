@@ -8,7 +8,7 @@
 }
 
 .portada {
-  font-size: 10px;
+  font-size: 11px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -285,7 +285,7 @@
   }
 }
 .barraSuperior .fa-bars {
-  font-size: 1.6em;
+  font-size: 2em;
   display: none;
   padding: 1.5em;
 }
