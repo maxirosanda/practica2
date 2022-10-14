@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../../assets/img/portada2.jpg);
+    background-image: url(../../assets/img/portada3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 40em;
@@ -13,11 +13,12 @@
         width: 90%;
         box-shadow: rgba(0,0,0,0.5) 0px -3px 8px;
         padding: 3em 1em;
-        background-color: white;
+        background-color: #0A466A;
   
         h2{
             font-size: 2em;
             padding: 1em 0.5em;
+            color: white;
         }
         @media(max-width:1200px){
             width: 500px;
@@ -68,9 +69,13 @@
             label{
                 font-size: 1.2em;
                 position: relative;
-                background-color: white;
+                background-color: #0A466A;
+                color: white;
                 right: -0.5em;
                 padding: 0.42em;
+                i{
+                    color: white
+                }
             }
         
             input[type="text"]{
@@ -90,6 +95,7 @@
                     width: 10em;
                 }
                 &::-webkit-calendar-picker-indicator{
+                    
                     @media(max-width:400px){
                         display: none;
                     }

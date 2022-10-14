@@ -1,10 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kanit", sans-serif;
+  color: #454445;
+}
+
 .portada__filtros__inputs input[type=submit], .portada__filtros__inputs input[type=date], .portada__filtros__inputs input[type=text] {
   outline: none;
   border: 0;
   width: 200px;
   padding: 0.5em;
   position: relative;
+  background-color: #0A466A;
+  color: white;
+}
+.portada__filtros__inputs input[type=submit]::placeholder, .portada__filtros__inputs input[type=date]::placeholder, .portada__filtros__inputs input[type=text]::placeholder {
+  color: white;
 }
 
 .portada {
@@ -12,7 +25,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(../../assets/img/portada2.jpg);
+  background-image: url(../../assets/img/portada3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 40em;
@@ -23,11 +36,12 @@
   width: 90%;
   box-shadow: rgba(0, 0, 0, 0.5) 0px -3px 8px;
   padding: 3em 1em;
-  background-color: white;
+  background-color: #0A466A;
 }
 .portada__filtros h2 {
   font-size: 2em;
   padding: 1em 0.5em;
+  color: white;
 }
 @media (max-width: 1200px) {
   .portada__filtros {
@@ -91,9 +105,13 @@
 .portada__filtros__inputs label {
   font-size: 1.2em;
   position: relative;
-  background-color: white;
+  background-color: #0A466A;
+  color: white;
   right: -0.5em;
   padding: 0.42em;
+}
+.portada__filtros__inputs label i {
+  color: white;
 }
 .portada__filtros__inputs input[type=text]::placeholder {
   font-size: 1.1em;
@@ -172,93 +190,46 @@
 }
 
 .navegador {
-  font-size: 10px;
+  font-size: 9px;
   display: flex;
   justify-content: center;
   height: 8em;
   align-items: center;
 }
-.navegador ul {
+.navegador .navegador__lista {
   list-style: none;
   display: flex;
   margin: 0;
   margin-left: 10em;
   padding: 0;
   width: 100%;
-  overflow-x: scroll;
-}
-.navegador ul::-webkit-scrollbar {
-  display: none;
 }
 @media (max-width: 992px) {
-  .navegador ul {
+  .navegador .navegador__lista {
     margin: 0;
   }
 }
 @media (max-width: 678px) {
-  .navegador ul {
-    justify-content: c;
+  .navegador .navegador__lista {
+    justify-content: center;
   }
 }
-.navegador ul li a {
+.navegador .navegador__lista li a {
   font-size: 1.8em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: end;
   text-decoration: none;
-  padding: 0.625em;
-  height: 4.25em;
+  height: 2em;
   color: #1B80BF;
   position: relative;
 }
-.navegador ul li a:hover {
+.navegador .navegador__lista li a:hover {
   color: #0565a5;
 }
-.navegador ul li a i, .navegador ul li a div {
+.navegador .navegador__lista li a i, .navegador .navegador__lista li a div {
   color: inherit;
-}
-.navegador ul li:nth-child(1) a::before {
-  content: "\f0f2";
-  font-family: FontAwesome;
-  position: absolute;
-  bottom: 2em;
-}
-.navegador ul li:nth-child(2) a::before {
-  content: "\f70c";
-  font-family: FontAwesome;
-  position: absolute;
-  bottom: 2em;
-}
-.navegador ul li:nth-child(3) a::before {
-  content: "\f4d7";
-  font-family: FontAwesome;
-  position: absolute;
-  bottom: 2em;
-}
-.navegador ul li:nth-child(4) a::before {
-  content: "\e533";
-  font-family: FontAwesome;
-  position: absolute;
-  bottom: 2em;
-}
-.navegador ul li:nth-child(5) a::before {
-  content: "\f072";
-  font-family: FontAwesome;
-  position: absolute;
-  bottom: 2em;
-}
-.navegador ul li:nth-child(6) a::before {
-  content: "\f594";
-  font-family: FontAwesome;
-  position: absolute;
-  bottom: 2em;
-}
-.navegador ul li:nth-child(7) a::before {
-  content: "\f5b0\f072";
-  font-family: FontAwesome;
-  position: absolute;
-  bottom: 2em;
 }
 
 .barraSuperior {
@@ -308,7 +279,7 @@
 }
 @media (max-width: 678px) {
   .barraSuperior ul {
-    position: absolute;
+    position: fixed;
     height: 100vh;
     background-color: white;
     flex-direction: column;
@@ -460,10 +431,12 @@
   margin: 10px 0px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Kanit", sans-serif;
-  color: #454445;
+main {
+  width: 90%;
+  margin: auto;
+}
+@media (max-width: 890px) {
+  main {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

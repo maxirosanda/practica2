@@ -4,4 +4,9 @@
     width: 200px;
     padding: 0.5em;
     position: relative;
+    background-color: #0A466A;
+    color: white;
+    &::placeholder{
+        color: white;
+    }
 }

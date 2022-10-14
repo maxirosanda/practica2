@@ -1,23 +1,22 @@
 .navegador{
-    font-size: 10px;
+    font-size: 9px;
     display: flex;
     justify-content: center;
     height: 8em;
     align-items: center;
-    ul{
+
+    .navegador__lista{
         list-style: none;
         display: flex;
         margin: 0;
         margin-left: 10em;
         padding: 0;
         width: 100%;
-        overflow-x: scroll;
-        &::-webkit-scrollbar {display: none;}
         @media(max-width:992px){
             margin: 0;
         }
         @media(max-width:678px){
-            justify-content: c;
+            justify-content: center;
         }
 
         li{
@@ -29,8 +28,7 @@
                 align-items: center;
                 justify-content: end;
                 text-decoration: none;
-                padding: 0.625em;
-                height: 4.25em;
+                height: 2em;
                 color: #1B80BF;
                 position: relative;
                 &:hover{
@@ -41,23 +39,7 @@
                 }
               
             }
-            @each $clave , $var in (1:"\f0f2",2:"\f70c",3:"\f4d7",4:"\e533",5:"\f072",6:"\f594",7:"\f5b0\f072") {
-                &:nth-child(#{$clave}){
-                    a{
-                   
-                        &::before{
-                            content: $var;
-                            font-family: $fontAwesome;
-                            position: absolute;
-                            bottom: 2em;
-                                   
-                        }
-                     
-                    }
-                    
-                }    
-            }
-
+    
         }
     }
 }
