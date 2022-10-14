@@ -1,62 +1,68 @@
-.card{
-    font-size:10px;
-    width: 25em;
-    height: 25em;
-    border: none;
-    margin: 2em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.cards{
     position: relative;
-    overflow: hidden;
-    transition: 1s;
-    img{
-        width: 100%;
-        transition: 1s;
-    }
-    .card__content{
-        opacity: 0;
-        transform: translateY(-3em);
-        position: absolute;
-        transition: 1s;
-        h2{
-            font-size: 1.6em;
-            margin: 0;
-            padding: 0;
-            color: white;
-        }
-        
-        p{
-            font-size: 1.4em;
-            margin: 0;
-            padding: 0;
-            color: white;
-        }
-
-    }
-   
-    &::after{
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: aqua;
-        transform: translate(-35em, -35em) rotateZ(60deg) scale(2);
-        transition: 2s;
-        opacity: 60%;
-
-    }
-    &:hover::after{
-        transform: translate(0px, 0px) rotateZ(60deg) scale(2)
-    }
-    &:hover img{
-        transform: scale(1.2);
+    margin: 10px 0px;
  
-    }
-    &:hover  &__content {
-        opacity: 100;
-        transform: translateY(0);
-    }
-   
 }
+.slick-slide{
+    display: flex !important;
+    justify-content: center;
+    padding: 10px;
+}
+.card{
+    width: 250px;
+    height: 350px;
+    font-size: 10px;
+    box-shadow: $shadowCard;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    img{
+        width: 25em;
+        height: 15em;
+        object-fit: cover;
 
+        
+    }
+    h4{
+        font-size: 2em;
+        text-align: center;
+        margin-top: 0.5em;
+        
+    }
+    h5{
+        font-size: 1.6em;
+        text-align: center;
+        margin-bottom: 0.7em;
+    }
+    p:nth-child(1){
+        position: absolute;
+        color:white;
+        left: 0.5em;
+        top: 0.3em;
+        
+    }
+    p:nth-child(2){
+        font-size: 2em;
+    }
+    p{
+        font-size: 1.6em;
+        text-align: center;
+    }
+    a{
+        font-size: 1.8em;
+        text-decoration: none;
+        width: 7.5em;
+        height: 2.5em;
+        background-image: linear-gradient(to right, $primaryColor 40%, #BF2C47 100%);
+        padding: 0.5em 1.5em;
+        display: block;
+        text-align: center;
+        border-radius: 0.25em;
+        color: white;
+        margin: 10px 0px;
+        
+    }
+    
+}
